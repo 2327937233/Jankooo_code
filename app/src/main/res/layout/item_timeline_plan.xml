@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"> <!-- 减小底部间距 -->
+
+    <!-- 时间/图标列 -->
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00"
+            android:textColor="#999999"
+            android:textSize="11sp" /> <!-- 缩小字体 -->
+            
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="2dp"
+            android:background="#F0F0F0" /> <!-- 缩短连接线 -->
+    </LinearLayout>
+
+    <!-- 内容描述 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_poi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="景点名称"
+            android:textColor="#1A1A1A"
+            android:textSize="15sp"
+            android:textStyle="bold" /> <!-- 缩小标题 -->
+
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="推荐理由及活动描述内容..."
+            android:textColor="#666666"
+            android:textSize="12sp"
+            android:lineSpacingExtra="1dp" /> <!-- 缩小正文 -->
+    </LinearLayout>
+
+</LinearLayout>

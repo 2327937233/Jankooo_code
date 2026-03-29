@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 基础颜色 -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- 强制深色文字 - 去掉所有透明度 -->
+    <color name="textColorPrimary">#FF000000</color> <!-- 纯黑 -->
+    <color name="textColorSecondary">#FF444444</color> <!-- 深灰 -->
+    <color name="colorCardBackground">#FFFFFFFF</color>
+    <color name="colorBackground">#FFE3F2FD</color>
+
+    <!-- 输入框专用：强制不透明 -->
+    <color name="app_text_input_color">#FF000000</color>
+    <color name="app_text_input_hint_color">#FF555555</color> <!-- 提示词也用深色 -->
+</resources>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 1. 顶部定位 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_weather_capsule"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="12dp">
+                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_nearby" app:tint="#F7B500" />
+                <TextView android:id="@+id/tv_weather_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="正在获取定位..." android:textColor="#333333" android:textSize="13sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="精选专题" android:textColor="#1A1A1A" android:textSize="20sp" android:textStyle="bold" />
+
+            <!-- 2. 精选专题横向滚动 -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 济南卡片 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_jinan_spring"
+                        android:layout_width="220dp"
+                        android:layout_height="280dp"
+                        android:layout_marginEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/jinan_spring" />
+                            <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/shape_card_gradient" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:background="@drawable/bg_tag_label" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="✨ 出门转转" android:textColor="#FFFFFF" android:textSize="10sp" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_margin="16dp" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="济南的泉：北方大地上的温润玉石" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="20个地点" android:textColor="#CCFFFFFF" android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- 上海卡片 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_shanghai_bund"
+                        android:layout_width="220dp"
+                        android:layout_height="280dp"
+                        android:layout_marginEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/shanghai" />
+                            <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/shape_card_gradient" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:background="@drawable/bg_tag_label" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="🚶 Citywalk" android:textColor="#FFFFFF" android:textSize="10sp" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_margin="16dp" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="上海的外滩：黄浦江畔的万国史诗" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="18个地点" android:textColor="#CCFFFFFF" android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- 北京卡片 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_beijing_palace"
+                        android:layout_width="220dp"
+                        android:layout_height="280dp"
+                        android:layout_marginEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/beijing" />
+                            <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/shape_card_gradient" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:background="@drawable/bg_tag_label" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="🏛️ 历史古建" android:textColor="#FFFFFF" android:textSize="10sp" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_margin="16dp" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="北京的故宫：红墙黄瓦里的千年星河" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="25个地点" android:textColor="#CCFFFFFF" android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- 南京卡片 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_nanjing_lake"
+                        android:layout_width="220dp"
+                        android:layout_height="280dp"
+                        android:layout_marginEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/nanjing" />
+                            <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/shape_card_gradient" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:background="@drawable/bg_tag_label" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="🍃 自然风光" android:textColor="#FFFFFF" android:textSize="10sp" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_margin="16dp" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="南京的湖：金陵烟水里的温婉诗意" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="15个地点" android:textColor="#CCFFFFFF" android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- 武汉卡片 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_wuhan_river"
+                        android:layout_width="220dp"
+                        android:layout_height="280dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:src="@drawable/wuhan" />
+                            <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/shape_card_gradient" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:background="@drawable/bg_tag_label" android:paddingHorizontal="10dp" android:paddingVertical="4dp" android:text="🌊 江城风采" android:textColor="#FFFFFF" android:textSize="10sp" />
+                            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_margin="16dp" android:orientation="vertical">
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="武汉的江：两江交汇里的豪迈灵秀" android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold" />
+                                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="12个地点" android:textColor="#CCFFFFFF" android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- 3. 我的行程栏 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="我的行程"
+                android:textColor="#1A1A1A"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout android:id="@+id/ll_itinerary_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+            <View android:layout_width="match_parent" android:layout_height="100dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 底部悬浮导航 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottom_nav_card"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="36dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:strokeWidth="0dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal">
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_itinerary" app:tint="#1A1A1A"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="行程" android:textColor="#1A1A1A" android:textSize="11sp" />
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/fab_center_card" android:layout_width="54dp" android:layout_height="42dp" app:cardBackgroundColor="#000000" app:cardCornerRadius="12dp">
+                <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_gravity="center" android:src="@drawable/ic_add" app:tint="#FFFFFF" />
+            </com.google.android.material.card.MaterialCardView>
+            <LinearLayout android:id="@+id/btn_nearby" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_location_outline" app:tint="#999999" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="附近" android:textColor="#999999" android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

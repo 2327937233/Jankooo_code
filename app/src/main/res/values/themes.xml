@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- 核心修复：强制主要文本和提示文本颜色，去除透明度 -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorHint">@color/app_text_input_hint_color</item>
+        
+        <!-- 针对 Material TextInput 的悬浮提示颜色 -->
+        <item name="hintTextColor">@color/textColorPrimary</item>
+        
+        <!-- 全局强制输入框样式 -->
+        <item name="editTextStyle">@style/DeepBlackEditText</item>
+    </style>
+
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication" />
+
+    <!-- 定义一个“绝对深色”的输入框样式 -->
+    <style name="DeepBlackEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColorHint">@color/app_text_input_hint_color</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="HotDestination">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:drawableTop">@drawable/destination_placeholder</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="Fab.Rounded" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.Fab.Rounded</item>
+    </style>
+
+    <style name="ShapeAppearance.App.Fab.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+</resources>

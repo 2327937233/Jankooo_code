@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="12dp">
+
+    <!-- 将 ImageView 替换为 TextView 以展示表情表情 -->
+    <TextView
+        android:id="@+id/tv_node_emoji"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/search_bar_background"
+        android:backgroundTint="#F5F5F5"
+        android:gravity="center"
+        android:text="📍"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:id="@+id/tv_node_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="景点"
+                android:textSize="10sp"
+                android:textColor="#009688"
+                android:background="@drawable/search_bar_background"
+                android:backgroundTint="#E0F2F1"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="1dp"
+                android:layout_marginEnd="8dp"/>
+                
+            <TextView
+                android:id="@+id/tv_node_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="喀纳斯湖"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_node_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情信息"
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_delete"
+        android:tint="#FF5252"
+        android:visibility="gone"
+        android:padding="4dp"/>
+
+    <ImageView
+        android:id="@+id/iv_drag"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_drag_handle"
+        android:tint="#CCCCCC"
+        android:visibility="gone"
+        android:padding="4dp"
+        android:layout_marginStart="8dp"/>
+
+</LinearLayout>

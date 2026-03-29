@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:backgroundTint="@android:color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_day_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DAY 1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="行程区域"
+                    android:textSize="12sp"
+                    android:textColor="#888888"/>
+                <TextView
+                    android:id="@+id/tv_route_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="乌鲁木齐 - 阿勒泰"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_inner_nodes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/btn_add_node"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="+ 添加地点/活动"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#333333"
+            android:stateListAnimator="@null"
+            android:visibility="gone"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
