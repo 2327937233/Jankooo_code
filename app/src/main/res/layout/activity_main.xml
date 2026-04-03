@@ -20,17 +20,45 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- 1. 顶部定位 -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_weather_capsule"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="12dp">
-                <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_nearby" app:tint="#F7B500" />
-                <TextView android:id="@+id/tv_weather_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="正在获取定位..." android:textColor="#333333" android:textSize="13sp" android:textStyle="bold" />
-            </LinearLayout>
+            <!-- 1. 顶部栏：定位 + 新闻按钮 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:id="@+id/ll_weather_capsule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_weather_capsule"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="12dp">
+                    <ImageView android:layout_width="16dp" android:layout_height="16dp" android:src="@drawable/ic_nearby" app:tint="#F7B500" />
+                    <TextView android:id="@+id/tv_weather_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="6dp" android:text="正在获取定位..." android:textColor="#333333" android:textSize="13sp" android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- 新增：右侧新闻按钮 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btn_news"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="#F5F5F5"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_search"
+                        app:tint="#333333" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
 
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="精选专题" android:textColor="#1A1A1A" android:textSize="20sp" android:textStyle="bold" />
 

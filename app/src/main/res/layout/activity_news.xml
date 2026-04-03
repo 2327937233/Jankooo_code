@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="60dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 新闻标题 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="江城记忆：在黄鹤楼与长江大桥间，领略大武汉的豪迈与温柔"
+                android:textColor="#1A1A1A"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:lineSpacingExtra="6dp" />
+
+            <!-- 作者信息 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_author_avatar"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="1dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#DDDDDD"
+                    android:src="@drawable/wuhan"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/CircleImage" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="江城寻味家"
+                        android:textColor="#1A1A1A"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="2024年12月30日 · 荆楚大地旅行官"
+                        android:textColor="#999999"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="关注"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    app:cornerRadius="16dp"
+                    app:backgroundTint="#1976D2"
+                    android:textColor="#FFFFFF"
+                    android:padding="0dp" />
+            </LinearLayout>
+
+            <!-- 核心图片：武汉 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#F5F5F5">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wuhan" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- 第一段正文 (AI 生成) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:lineSpacingExtra="10dp"
+                android:text="武汉，这座屹立于两江交汇处的英雄城市，自带一种宏阔的江湖气概。登上黄鹤楼，极目楚天舒，滚滚长江东逝水的壮阔尽收眼底。江面上货轮穿梭，两岸的高楼林立，古老的阁楼与现代的摩天大楼在同一片蓝天下交相辉映，诉说着这座城市‘九省通衢’的辉煌历史。"
+                android:textColor="#34495E"
+                android:textSize="17sp" />
+
+            <!-- 第二段正文 (AI 生成) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="10dp"
+                android:text="横跨大江的武汉长江大桥，像一条巨龙锁住了滔滔江水。漫步在大桥之上，感受脚下铁轨震动带来的节奏感，看夕阳将江面染成金红色，你会深刻感受到那种‘一桥飞架南北，天堑变通途’的豪迈。而当夜幕降临，江两岸的灯光秀开启，整座城市仿佛陷入了一场瑰丽的梦境。"
+                android:textColor="#34495E"
+                android:textSize="17sp" />
+
+            <!-- 描述文字 (AI 生成) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:lineSpacingExtra="10dp"
+                android:text="武汉的魅力，也藏在清晨那碗热气腾腾的热干面里。粮道街的喧嚣、昙华林的文艺、黎黄陂路的洋房建筑，这些充满了烟火气与人文感的角落，勾勒出了武汉最真实的一面。在这里，既能看到码头文化的坚韧，也能感受到艺术生活的细腻。大开大合的江城，正张开双臂迎接每一位渴望探索的旅人。"
+                android:textColor="#34495E"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 底部操作栏 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        app:cardElevation="32dp"
+        app:cardCornerRadius="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_launcher_background" app:tint="#455A64"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="转发" android:textSize="10sp" android:textColor="#90A4AE"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_launcher_background" app:tint="#455A64"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="评论" android:textSize="10sp" android:textColor="#90A4AE"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_launcher_background" app:tint="#EF5350"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="5.2k" android:textSize="10sp" android:textColor="#90A4AE"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_launcher_background" app:tint="#1976D2"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="收藏" android:textSize="10sp" android:textColor="#90A4AE"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+  <!--李雨湘 202300805028-->

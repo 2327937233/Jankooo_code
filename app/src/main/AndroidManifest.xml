@@ -38,7 +38,10 @@
             </intent-filter>
         </activity>
 
-        <!-- 注册 AI 结果显示页面（新增） -->
+        <!-- 注册新闻页面 -->
+        <activity android:name=".NewsActivity" />
+        
+        <!-- 注册 AI 结果显示页面 -->
         <activity android:name=".AIResultActivity" />
         
         <activity android:name=".ItineraryDetailActivity" />

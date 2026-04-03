@@ -87,6 +87,16 @@ public class MainActivity extends AppCompatActivity implements GeocodeSearch.OnG
         });
         findViewById(R.id.fab_center_card).setOnClickListener(v -> new AddItineraryBottomSheet().show(getSupportFragmentManager(), "add"));
         findViewById(R.id.btn_nearby).setOnClickListener(v -> startActivity(new Intent(this, NearbyActivity.class)));
+        
+        // 【关键修复】补全新闻按钮的跳转监听
+        View btnNews = findViewById(R.id.btn_news);
+        if (btnNews != null) {
+            btnNews.setOnClickListener(v -> {
+                Intent intent = new Intent(MainActivity.this, NewsActivity.class);
+                startActivity(intent);
+            });
+        }
+        
         setupSpecialTopicListeners();
     }
 
@@ -186,10 +196,7 @@ public class MainActivity extends AppCompatActivity implements GeocodeSearch.OnG
                 URL url = new URL(apiUrl);
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setConnectTimeout(8000);
-                
-                // 【核心修复点】先获取状态码
                 int responseCode = conn.getResponseCode(); 
-                
                 if (responseCode == 200) {
                     BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                     StringBuilder sb = new StringBuilder();
@@ -207,8 +214,7 @@ public class MainActivity extends AppCompatActivity implements GeocodeSearch.OnG
                         final String info = json.optString("info");
                         runOnUiThread(() -> tvWeatherInfo.setText("服务失败: " + info));
                     }
-                } else {
-                    // 这里直接使用上面获取到的 responseCode 变量，不再在 Lambda 内部调用 conn.getResponseCode()
+                } else { 
                     runOnUiThread(() -> tvWeatherInfo.setText("网络异常: " + responseCode)); 
                 }
             } catch (Exception e) {
