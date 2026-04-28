@@ -34,11 +34,11 @@ AI 生成旅行计划
 
 | 首页 | 地图专题页 |
 | --- | --- |
-| ![首页：精选专题和我的行程](docs/images/home.png) | ![地图专题页：地图与景点信息卡片](docs/images/map-topic.png) |
+| ![首页：精选专题和我的行程](docs/images/home.jpg) | ![地图专题页：地图与景点信息卡片](docs/images/map-topic.jpg) |
 
 | 创建行程页 | 行程详情页 |
 | --- | --- |
-| ![创建行程页：目的地日期和偏好选择](docs/images/create-plan.png) | ![行程详情页：地图和每日行程](docs/images/itinerary-detail.png) |
+| ![创建行程页：目的地日期和偏好选择](docs/images/create-plan.jpg) | ![行程详情页：地图和每日行程](docs/images/itinerary-detail.jpg) |
 
 ## 界面效果说明
 
